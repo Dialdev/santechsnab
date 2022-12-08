@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'sisea',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a3820a0a68367e052e87240e46239ce9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '478d0a4cde750083d2515ca5cba54ccc',
+  'native_key' => 'sisea.elastic.port',
+  'object' => '{"key":"sisea.elastic.port","value":"9200","xtype":"textfield","namespace":"sisea","area":"ElasticSearch","editedon":null}',
+);

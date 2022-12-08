@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'phpthumbsup',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f1b951dc4d7a2e3757c93182bc070713',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e9e5b578a6f095f350080b452d3c99ca',
+  'native_key' => 'phpthumbsup.default',
+  'object' => '{"key":"phpthumbsup.default","value":"","xtype":"textfield","namespace":"phpthumbsup","area":"general","editedon":null}',
+);

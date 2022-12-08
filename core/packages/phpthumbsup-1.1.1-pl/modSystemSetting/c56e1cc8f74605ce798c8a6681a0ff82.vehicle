@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'phpthumbsup',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '24ffc4d51b624d2ca47ba1773e5a626a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'c56e1cc8f74605ce798c8a6681a0ff82',
+  'native_key' => 'phpthumbsup.cache_path',
+  'object' => '{"key":"phpthumbsup.cache_path","value":"{core_path}cache\\/phpthumbsup\\/","xtype":"textfield","namespace":"phpthumbsup","area":"paths","editedon":null}',
+);

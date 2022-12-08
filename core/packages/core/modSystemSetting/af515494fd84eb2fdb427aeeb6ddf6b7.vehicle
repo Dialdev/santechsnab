@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c1efdf40ebaa2e545fa298f21adf178c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'af515494fd84eb2fdb427aeeb6ddf6b7',
+  'native_key' => 'use_browser',
+  'object' => '{"key":"use_browser","value":"1","xtype":"combo-boolean","namespace":"core","area":"file","editedon":null}',
+);

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'phpthumbsup',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9a1f80346693eccc2f8172d8e8a16a37',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd2b8085ee0802723af80569a609e8a5d',
+  'native_key' => 'phpthumbsup.responsive_threshold',
+  'object' => '{"key":"phpthumbsup.responsive_threshold","value":"480,1024","xtype":"textfield","namespace":"phpthumbsup","area":"general","editedon":null}',
+);

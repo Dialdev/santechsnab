@@ -1,0 +1,367 @@
+# MODX supports Friendly URLs via this .htaccess file. You must serve web
+# pages via Apache with mod_rewrite to use this functionality, and you must
+# change the file name from ht.access to .htaccess.
+#
+# Make sure RewriteBase points to the directory where you installed MODX.
+# E.g., "/modx" if your installation is in a "modx" subdirectory.
+#
+# You may choose to make your URLs non-case-sensitive by adding a NC directive
+# to your rule: RewriteRule ^(.*)$ index.php?q=$1 [L,QSA,NC]
+
+
+RewriteEngine On
+RewriteBase /
+
+# ******************* НОВЫЕ редиректы начало
+RewriteRule ^zamki-navesnyie/$ https://santechsnab.com/katalog/zamki/zamki-navesnyie/ [R=301,NC,L]
+RewriteRule ^zamki/$ https://santechsnab.com/katalog/zamki/ [R=301,NC,L]
+RewriteRule ^sadovyij-instrument/$ https://santechsnab.com/katalog/xozinventar/sadovyij-instrument/ [R=301,NC,L]
+RewriteRule ^perchatki-i-rukaviczyi/$ https://santechsnab.com/katalog/xozinventar/perchatki-i-rukaviczyi/ [R=301,NC,L]
+RewriteRule ^venik-(sorgo)/$ https://santechsnab.com/katalog/xozinventar/metlyi/venik-(sorgo)/ [R=301,NC,L]
+RewriteRule ^shvabra-derevyannaya/$ https://santechsnab.com/katalog/xozinventar/metlyi/shvabra-derevyannaya/ [R=301,NC,L]
+RewriteRule ^shhetka-polovaya-(bez-cherenka)/$ https://santechsnab.com/katalog/xozinventar/metlyi/shhetka-polovaya-(bez-cherenka)/ [R=301,NC,L]
+RewriteRule ^metla-plastmassovaya-ploskaya-(s-cherenkom)/$ https://santechsnab.com/katalog/xozinventar/metlyi/metla-plastmassovaya-ploskaya-(s-cherenkom)/ [R=301,NC,L]
+RewriteRule ^metla-plastmassovaya-kruglaya-(s-cherenkom)/$ https://santechsnab.com/katalog/xozinventar/metlyi/metla-plastmassovaya-kruglaya-(s-cherenkom)/ [R=301,NC,L]
+RewriteRule ^metla-berezovaya/$ https://santechsnab.com/katalog/xozinventar/metlyi/metla-berezovaya/ [R=301,NC,L]
+RewriteRule ^metlyi/$ https://santechsnab.com/katalog/xozinventar/metlyi/ [R=301,NC,L]
+RewriteRule ^kisti/$ https://santechsnab.com/katalog/xozinventar/kisti/ [R=301,NC,L]
+RewriteRule ^xozinventar/$ https://santechsnab.com/katalog/xozinventar/ [R=301,NC,L]
+RewriteRule ^xomutyi-silovyie/$ https://santechsnab.com/katalog/xomutyi/xomutyi-silovyie/ [R=301,NC,L]
+RewriteRule ^xomutyi-chervyachnyie/$ https://santechsnab.com/katalog/xomutyi/xomutyi-chervyachnyie/ [R=301,NC,L]
+RewriteRule ^xomutyi/$ https://santechsnab.com/katalog/xomutyi/ [R=301,NC,L]
+RewriteRule ^viniplast/$ https://santechsnab.com/katalog/viniplast/ [R=301,NC,L]
+RewriteRule ^zaglushki-pvx/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/zaglushki-pvx/ [R=301,NC,L]
+RewriteRule ^trubyi-pvx/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/trubyi-pvx/ [R=301,NC,L]
+RewriteRule ^trojniki-pvx/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/trojniki-pvx/ [R=301,NC,L]
+RewriteRule ^revizii-pvx/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/revizii-pvx/ [R=301,NC,L]
+RewriteRule ^perexodyi-pvx/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/perexodyi-pvx/ [R=301,NC,L]
+RewriteRule ^otvodyi-pvx/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/otvodyi-pvx/ [R=301,NC,L]
+RewriteRule ^muftyi-pvx/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/muftyi-pvx/ [R=301,NC,L]
+RewriteRule ^krestovinyi-pvx/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/krestovinyi-pvx/ [R=301,NC,L]
+RewriteRule ^trubyi-i-fitingi-pvx-beznapornyie/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pvx-beznapornyie/ [R=301,NC,L]
+RewriteRule ^zaglushki-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/zaglushki-pprc/ [R=301,NC,L]
+RewriteRule ^ventili-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/ventili-pprc/ [R=301,NC,L]
+RewriteRule ^ugolniki-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/ugolniki-pprc/ [R=301,NC,L]
+RewriteRule ^trubyi-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/trubyi-pprc/ [R=301,NC,L]
+RewriteRule ^trojniki-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/trojniki-pprc/ [R=301,NC,L]
+RewriteRule ^skobyi-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/skobyi-pprc/ [R=301,NC,L]
+RewriteRule ^planki-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/planki-pprc/ [R=301,NC,L]
+RewriteRule ^oporyi-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/oporyi-pprc/ [R=301,NC,L]
+RewriteRule ^muftyi-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/muftyi-pprc/ [R=301,NC,L]
+RewriteRule ^muftyi-kombinirovannyie/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/muftyi-kombinirovannyie/ [R=301,NC,L]
+RewriteRule ^krestovinyi-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/krestovinyi-pprc/ [R=301,NC,L]
+RewriteRule ^kranyi-sharovyie-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/kranyi-sharovyie-pprc/ [R=301,NC,L]
+RewriteRule ^klapanyi-obratnyie-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/klapanyi-obratnyie-pprc/ [R=301,NC,L]
+RewriteRule ^filtryi-setchatyie-pprc/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/filtryi-setchatyie-pprc/ [R=301,NC,L]
+RewriteRule ^apparatyi-dlya-svarki-plastikovyix-trub/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/apparatyi-dlya-svarki-plastikovyix-trub/ [R=301,NC,L]
+RewriteRule ^trubyi-i-fitingi-polipropilenovyie/$ https://santechsnab.com/katalog/trubyi-i-fitingi-polipropilenovyie/ [R=301,NC,L]
+RewriteRule ^pnevmotrubki-poliuretanovyie/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/pnevmotrubki-poliuretanovyie/ [R=301,NC,L]
+RewriteRule ^fitingi-dlya-pnevmaticheskix-sistem/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/fitingi-dlya-pnevmaticheskix-sistem/ [R=301,NC,L]
+RewriteRule ^czangovyie-y-obraznyie-fitingi/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/czangovyie-y-obraznyie-fitingi/ [R=301,NC,L]
+RewriteRule ^czangovyie-x-obraznyie-fitingi/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/czangovyie-x-obraznyie-fitingi/ [R=301,NC,L]
+RewriteRule ^czangovyie-uglovyie-fitingi/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/czangovyie-uglovyie-fitingi/ [R=301,NC,L]
+RewriteRule ^czangovyie-t-obraznyie-fitingi/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/czangovyie-t-obraznyie-fitingi/ [R=301,NC,L]
+RewriteRule ^czangovyie-regulyatoryi-rasxoda-vozduxa/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/czangovyie-regulyatoryi-rasxoda-vozduxa/ [R=301,NC,L]
+RewriteRule ^czangovyie-fitingi-zaglushki/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/czangovyie-fitingi-zaglushki/ [R=301,NC,L]
+RewriteRule ^byistrosemnyie-soedineniya-rapid/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/byistrosemnyie-soedineniya-rapid/ [R=301,NC,L]
+RewriteRule ^trubyi-i-fitingi-pnevmaticheskie/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnevmaticheskie/ [R=301,NC,L]
+RewriteRule ^ugolniki-pnd/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnd/ugolniki-pnd/ [R=301,NC,L]
+RewriteRule ^trojniki-pnd/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnd/trojniki-pnd/ [R=301,NC,L]
+RewriteRule ^muftyi-pnd/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnd/muftyi-pnd/ [R=301,NC,L]
+RewriteRule ^trubyi-i-fitingi-pnd/$ https://santechsnab.com/katalog/trubyi-i-fitingi-pnd/ [R=301,NC,L]
+RewriteRule ^svarochnyie-apparatyi-sturm/$ https://santechsnab.com/katalog/svarochnoe-oborudovanie/svarochnyie-apparatyi-sturm/ [R=301,NC,L]
+RewriteRule ^rezaki/$ https://santechsnab.com/katalog/svarochnoe-oborudovanie/rezaki/ [R=301,NC,L]
+RewriteRule ^reduktor-kislorodnyij/$ https://santechsnab.com/katalog/svarochnoe-oborudovanie/reduktoryi/reduktor-kislorodnyij/ [R=301,NC,L]
+RewriteRule ^reduktoryi/$ https://santechsnab.com/katalog/svarochnoe-oborudovanie/reduktoryi/ [R=301,NC,L]
+RewriteRule ^elektrodyi/$ https://santechsnab.com/katalog/svarochnoe-oborudovanie/elektrodyi/ [R=301,NC,L]
+RewriteRule ^svarochnoe-oborudovanie/$ https://santechsnab.com/katalog/svarochnoe-oborudovanie/ [R=301,NC,L]
+RewriteRule ^zaglushki-stalnyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/zaglushki-stalnyie/ [R=301,NC,L]
+RewriteRule ^ugolniki-chugunnyie-rezbovyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/ugolniki-chugunnyie-rezbovyie/ [R=301,NC,L]
+RewriteRule ^trojniki-stalnyie-pod-privarku/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/trojniki-stalnyie-pod-privarku/ [R=301,NC,L]
+RewriteRule ^trojniki-chugunnyie-rezbovyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/trojniki-chugunnyie-rezbovyie/ [R=301,NC,L]
+RewriteRule ^soediniteli-amerikanki-chugunnyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/soediniteli-amerikanki-chugunnyie/ [R=301,NC,L]
+RewriteRule ^sgonyi-stalnyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/sgonyi-stalnyie/ [R=301,NC,L]
+RewriteRule ^rezbyi-stalnyie-pod-privarku/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/rezbyi-stalnyie-pod-privarku/ [R=301,NC,L]
+RewriteRule ^perexodyi-stalnyie-pod-svarku/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/perexodyi-stalnyie-pod-svarku/ [R=301,NC,L]
+RewriteRule ^otvodyi-stalnyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/otvodyi-stalnyie/ [R=301,NC,L]
+RewriteRule ^muftyi-stalnyie-i-chugunnyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/muftyi-stalnyie-i-chugunnyie/ [R=301,NC,L]
+RewriteRule ^kontrgajki/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/kontrgajki/ [R=301,NC,L]
+RewriteRule ^flanczyi-stalnyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/flanczyi-stalnyie/ [R=301,NC,L]
+RewriteRule ^bochata-stalnyie/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/bochata-stalnyie/ [R=301,NC,L]
+RewriteRule ^soedinitelnyie-detali-truboprovodov/$ https://santechsnab.com/katalog/soedinitelnyie-detali-truboprovodov/ [R=301,NC,L]
+RewriteRule ^shnuryi-rezinovyie-gost-6467-79/$ https://santechsnab.com/katalog/shnuryi-rezinovyie/shnuryi-rezinovyie-gost-6467-79/ [R=301,NC,L]
+RewriteRule ^shnuryi-rezinovyie/$ https://santechsnab.com/katalog/shnuryi-rezinovyie/ [R=301,NC,L]
+RewriteRule ^vannyi,-poddonyi-i-komplektuyushhie-k-nim/$ https://santechsnab.com/katalog/santexnika-dlya-vannyix-komnat/vannyi,-poddonyi-i-komplektuyushhie-k-nim/ [R=301,NC,L]
+RewriteRule ^unitazyi/$ https://santechsnab.com/katalog/santexnika-dlya-vannyix-komnat/unitazyi/ [R=301,NC,L]
+RewriteRule ^umyivalniki/$ https://santechsnab.com/katalog/santexnika-dlya-vannyix-komnat/umyivalniki/ [R=301,NC,L]
+RewriteRule ^smesiteli/$ https://santechsnab.com/katalog/santexnika-dlya-vannyix-komnat/smesiteli/ [R=301,NC,L]
+RewriteRule ^pissuaryi,-chashi-genuya-i-komplektuyushhie-k-nim/$ https://santechsnab.com/katalog/santexnika-dlya-vannyix-komnat/pissuaryi,-chashi-genuya-i-komplektuyushhie-k-nim/ [R=301,NC,L]
+RewriteRule ^gibkaya-podvodka/$ https://santechsnab.com/katalog/santexnika-dlya-vannyix-komnat/gibkaya-podvodka/ [R=301,NC,L]
+RewriteRule ^santexnika-dlya-vannyix-komnat/$ https://santechsnab.com/katalog/santexnika-dlya-vannyix-komnat/ [R=301,NC,L]
+RewriteRule ^shlangi-spiralnyie-iz-pvx/$ https://santechsnab.com/katalog/rukava-i-shlangi/shlangi-spiralnyie-iz-pvx/ [R=301,NC,L]
+RewriteRule ^shlangi-napornyie-iz-pvx/$ https://santechsnab.com/katalog/rukava-i-shlangi/shlangi-napornyie-iz-pvx/ [R=301,NC,L]
+RewriteRule ^rukava-s-nityanyim-usileniem/$ https://santechsnab.com/katalog/rukava-i-shlangi/rukava-s-nityanyim-usileniem/ [R=301,NC,L]
+RewriteRule ^rukava-napornyie/$ https://santechsnab.com/katalog/rukava-i-shlangi/rukava-napornyie/ [R=301,NC,L]
+RewriteRule ^rukava-napornyie-tu/$ https://santechsnab.com/katalog/rukava-i-shlangi/rukava-napornyie-tu/ [R=301,NC,L]
+RewriteRule ^rukava-naporno-vsasyivayushhie/$ https://santechsnab.com/katalog/rukava-i-shlangi/rukava-naporno-vsasyivayushhie/ [R=301,NC,L]
+RewriteRule ^rukava-dlya-gazovoj-svarki/$ https://santechsnab.com/katalog/rukava-i-shlangi/rukava-dlya-gazovoj-svarki/ [R=301,NC,L]
+RewriteRule ^rukava-dlya-bituma/$ https://santechsnab.com/katalog/rukava-i-shlangi/rukava-dlya-bituma/ [R=301,NC,L]
+RewriteRule ^rukava-i-shlangi/$ https://santechsnab.com/katalog/rukava-i-shlangi/ [R=301,NC,L]
+RewriteRule ^silikonovyie-plastinyi-pishhevyie/$ https://santechsnab.com/katalog/rezina-texnicheskaya/silikonovyie-plastinyi-pishhevyie/ [R=301,NC,L]
+RewriteRule ^rezina-tmkshh/$ https://santechsnab.com/katalog/rezina-texnicheskaya/rezina-tmkshh/ [R=301,NC,L]
+RewriteRule ^rezina-poristaya/$ https://santechsnab.com/katalog/rezina-texnicheskaya/rezina-poristaya/ [R=301,NC,L]
+RewriteRule ^rezina-pishhevaya/$ https://santechsnab.com/katalog/rezina-texnicheskaya/rezina-pishhevaya/ [R=301,NC,L]
+RewriteRule ^rezina-mbs/$ https://santechsnab.com/katalog/rezina-texnicheskaya/rezina-mbs/ [R=301,NC,L]
+RewriteRule ^plastina-vakuumnaya/$ https://santechsnab.com/katalog/rezina-texnicheskaya/plastina-vakuumnaya/ [R=301,NC,L]
+RewriteRule ^rezina-texnicheskaya/$ https://santechsnab.com/katalog/rezina-texnicheskaya/ [R=301,NC,L]
+RewriteRule ^remni-klinovyie-z(o)/$ https://santechsnab.com/katalog/remni-klinovyie/remni-klinovyie-z(o)/ [R=301,NC,L]
+RewriteRule ^remni-klinovyie-e(d)/$ https://santechsnab.com/katalog/remni-klinovyie/remni-klinovyie-e(d)/ [R=301,NC,L]
+RewriteRule ^remni-klinovyie-d(g)/$ https://santechsnab.com/katalog/remni-klinovyie/remni-klinovyie-d(g)/ [R=301,NC,L]
+RewriteRule ^remni-klinovyie-c(v)/$ https://santechsnab.com/katalog/remni-klinovyie/remni-klinovyie-c(v)/ [R=301,NC,L]
+RewriteRule ^remni-klinovyie-b(b)/$ https://santechsnab.com/katalog/remni-klinovyie/remni-klinovyie-b(b)/ [R=301,NC,L]
+RewriteRule ^remni-klinovyie-a/$ https://santechsnab.com/katalog/remni-klinovyie/remni-klinovyie-a/ [R=301,NC,L]
+RewriteRule ^remni-klinovyie/$ https://santechsnab.com/katalog/remni-klinovyie/ [R=301,NC,L]
+RewriteRule ^radiatoryi-chugunnyie/$ https://santechsnab.com/katalog/radiatoryi/radiatoryi-chugunnyie/ [R=301,NC,L]
+RewriteRule ^radiatoryi-alyuminievyie/$ https://santechsnab.com/katalog/radiatoryi/radiatoryi-alyuminievyie/ [R=301,NC,L]
+RewriteRule ^komplektyi-dlya-radiatorov/$ https://santechsnab.com/katalog/radiatoryi/komplektyi-dlya-radiatorov/ [R=301,NC,L]
+RewriteRule ^radiatoryi/$ https://santechsnab.com/katalog/radiatoryi/ [R=301,NC,L]
+RewriteRule ^sol/$ https://santechsnab.com/katalog/promyishlennaya-ximiya/sol/ [R=301,NC,L]
+RewriteRule ^karbid-kalcziya/$ https://santechsnab.com/katalog/promyishlennaya-ximiya/karbid-kalcziya/ [R=301,NC,L]
+RewriteRule ^izvest/$ https://santechsnab.com/katalog/promyishlennaya-ximiya/izvest/ [R=301,NC,L]
+RewriteRule ^promyishlennaya-ximiya/$ https://santechsnab.com/katalog/promyishlennaya-ximiya/ [R=301,NC,L]
+RewriteRule ^schetchiki-vodyi-turbinnyie-vx,-vmx,-vmg/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/schetchiki-vodyi-turbinnyie-vx,-vmx,-vmg/ [R=301,NC,L]
+RewriteRule ^schetchiki-vodyi-turbinnyie-vsgn,-vsxn,-vstn/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/schetchiki-vodyi-turbinnyie-vsgn,-vsxn,-vstn/ [R=301,NC,L]
+RewriteRule ^schetchiki-vodyi-turbinnyie-stvu,-stvx/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/schetchiki-vodyi-turbinnyie-stvu,-stvx/ [R=301,NC,L]
+RewriteRule ^schetchiki-vodyi-kryilchatyie-vskm-90/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/schetchiki-vodyi-kryilchatyie-vskm-90/ [R=301,NC,L]
+RewriteRule ^schetchiki-vodyi-kryilchatyie-svk/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/schetchiki-vodyi-kryilchatyie-svk/ [R=301,NC,L]
+RewriteRule ^schetchiki-vodyi-kryilchatyie-skb/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/schetchiki-vodyi-kryilchatyie-skb/ [R=301,NC,L]
+RewriteRule ^manometryi/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/manometryi/ [R=301,NC,L]
+RewriteRule ^kranyi-dlya-manometrov/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/kranyi-dlya-manometrov/ [R=301,NC,L]
+RewriteRule ^priboryi-ucheta-i-kip/$ https://santechsnab.com/katalog/priboryi-ucheta-i-kip/ [R=301,NC,L]
+RewriteRule ^trojnik-flanczevyij-s-pozharnoj-podstavkoj/$ https://santechsnab.com/katalog/pozharnoe-oborudovanie/trojnik-flanczevyij-s-pozharnoj-podstavkoj/ [R=301,NC,L]
+RewriteRule ^podstavki-dlya-pozharnyix-gidrantov/$ https://santechsnab.com/katalog/pozharnoe-oborudovanie/podstavki-dlya-pozharnyix-gidrantov/ [R=301,NC,L]
+RewriteRule ^gidrantyi-pozharnyie-stalnyie/$ https://santechsnab.com/katalog/pozharnoe-oborudovanie/gidrantyi-pozharnyie-stalnyie/ [R=301,NC,L]
+RewriteRule ^gidrantyi-pozharnyie-chugunnyie/$ https://santechsnab.com/katalog/pozharnoe-oborudovanie/gidrantyi-pozharnyie-chugunnyie/ [R=301,NC,L]
+RewriteRule ^pozharnoe-oborudovanie/$ https://santechsnab.com/katalog/pozharnoe-oborudovanie/ [R=301,NC,L]
+RewriteRule ^sterzhni/$ https://santechsnab.com/katalog/poliuretan/sterzhni/ [R=301,NC,L]
+RewriteRule ^plastinyi/$ https://santechsnab.com/katalog/poliuretan/plastinyi/ [R=301,NC,L]
+RewriteRule ^poliuretan/$ https://santechsnab.com/katalog/poliuretan/ [R=301,NC,L]
+RewriteRule ^podshipniki-sharikovyie-radialnyie-sfericheskie-dvuxryadnyie/$ https://santechsnab.com/katalog/podshipniki/podshipniki-sharikovyie-radialnyie-sfericheskie-dvuxryadnyie/ [R=301,NC,L]
+RewriteRule ^podshipniki-sharikovyie-radialnyie-odnoryadnyie-s-uplotneniyami/$ https://santechsnab.com/katalog/podshipniki/podshipniki-sharikovyie-radialnyie-odnoryadnyie-s-uplotneniyami/ [R=301,NC,L]
+RewriteRule ^podshipniki-sharikovyie-radialnyie-odnoryadnyie-(otkryityie)/$ https://santechsnab.com/katalog/podshipniki/podshipniki-sharikovyie-radialnyie-odnoryadnyie-(otkryityie)/ [R=301,NC,L]
+RewriteRule ^podshipniki/$ https://santechsnab.com/katalog/podshipniki/ [R=301,NC,L]
+RewriteRule ^prokladki-paronitovyie/$ https://santechsnab.com/katalog/paronit/prokladki-paronitovyie/ [R=301,NC,L]
+RewriteRule ^paronit-obshhego-naznacheniya/$ https://santechsnab.com/katalog/paronit/paronit-obshhego-naznacheniya/ [R=301,NC,L]
+RewriteRule ^paronit-maslobenzostojkij/$ https://santechsnab.com/katalog/paronit/paronit-maslobenzostojkij/ [R=301,NC,L]
+RewriteRule ^paronit/$ https://santechsnab.com/katalog/paronit/ [R=301,NC,L]
+RewriteRule ^orgsteklo/$ https://santechsnab.com/katalog/orgsteklo/ [R=301,NC,L]
+RewriteRule ^nasosyi-czirkulyaczionnyie/$ https://santechsnab.com/katalog/nasosnoe-oborudovanie/nasosyi-czirkulyaczionnyie/ [R=301,NC,L]
+RewriteRule ^nasosnoe-oborudovanie/$ https://santechsnab.com/katalog/nasosnoe-oborudovanie/ [R=301,NC,L]
+RewriteRule ^nabivki-apr-31/$ https://santechsnab.com/katalog/nabivki-salnikovie/nabivki-apr-31/ [R=301,NC,L]
+RewriteRule ^nabivki-ap-31/$ https://santechsnab.com/katalog/nabivki-salnikovie/nabivki-ap-31/ [R=301,NC,L]
+RewriteRule ^nabivki-agi/$ https://santechsnab.com/katalog/nabivki-salnikovie/nabivki-agi/ [R=301,NC,L]
+RewriteRule ^nabivki-aft/$ https://santechsnab.com/katalog/nabivki-salnikovie/nabivki-aft/ [R=301,NC,L]
+RewriteRule ^nabivki-salnikovie/$ https://santechsnab.com/katalog/nabivki-salnikovie/ [R=301,NC,L]
+RewriteRule ^podmotka-dlya-trub/$ https://santechsnab.com/katalog/materialyi-dlya-uplotneniya-i-izolyaczii/podmotka-dlya-trub/ [R=301,NC,L]
+RewriteRule ^paklya/$ https://santechsnab.com/katalog/materialyi-dlya-uplotneniya-i-izolyaczii/paklya/ [R=301,NC,L]
+RewriteRule ^lnovolokno/$ https://santechsnab.com/katalog/materialyi-dlya-uplotneniya-i-izolyaczii/lnovolokno/ [R=301,NC,L]
+RewriteRule ^lentyi-fum/$ https://santechsnab.com/katalog/materialyi-dlya-uplotneniya-i-izolyaczii/lentyi-fum/ [R=301,NC,L]
+RewriteRule ^izolentyi/$ https://santechsnab.com/katalog/materialyi-dlya-uplotneniya-i-izolyaczii/izolentyi/ [R=301,NC,L]
+RewriteRule ^geli-santexnicheskie/$ https://santechsnab.com/katalog/materialyi-dlya-uplotneniya-i-izolyaczii/geli-santexnicheskie/ [R=301,NC,L]
+RewriteRule ^materialyi-dlya-uplotneniya-i-izolyaczii/$ https://santechsnab.com/katalog/materialyi-dlya-uplotneniya-i-izolyaczii/ [R=301,NC,L]
+RewriteRule ^tkan-asbestovaya/$ https://santechsnab.com/katalog/list-asbestovyij/tkan-asbestovaya/ [R=301,NC,L]
+RewriteRule ^shnuryi-asbestovyie/$ https://santechsnab.com/katalog/list-asbestovyij/shnuryi-asbestovyie/ [R=301,NC,L]
+RewriteRule ^lenta-asbestovaya/$ https://santechsnab.com/katalog/list-asbestovyij/lenta-asbestovaya/ [R=301,NC,L]
+RewriteRule ^kroshka-asbestovaya/$ https://santechsnab.com/katalog/list-asbestovyij/kroshka-asbestovaya/ [R=301,NC,L]
+RewriteRule ^karton-asbestovyij/$ https://santechsnab.com/katalog/list-asbestovyij/karton-asbestovyij/ [R=301,NC,L]
+RewriteRule ^list-asbestovyij/$ https://santechsnab.com/katalog/list-asbestovyij/ [R=301,NC,L]
+RewriteRule ^lentyi-konvejernyie/$ https://santechsnab.com/katalog/lentyi-konvejernyie-i-krepleniya-k-nim/lentyi-konvejernyie/ [R=301,NC,L]
+RewriteRule ^krepleniya-tipa-krokodil/$ https://santechsnab.com/katalog/lentyi-konvejernyie-i-krepleniya-k-nim/krepleniya-tipa-krokodil/ [R=301,NC,L]
+RewriteRule ^lentyi-konvejernyie-i-krepleniya-k-nim/$ https://santechsnab.com/katalog/lentyi-konvejernyie-i-krepleniya-k-nim/ [R=301,NC,L]
+RewriteRule ^kolonki-vodorazbornyie/$ https://santechsnab.com/katalog/kolonki-vodorazbornyie/ [R=301,NC,L]
+RewriteRule ^karton-prokladochnyij/$ https://santechsnab.com/katalog/karton/karton-prokladochnyij/ [R=301,NC,L]
+RewriteRule ^karton-elektroizolyaczionnyij/$ https://santechsnab.com/katalog/karton/karton-elektroizolyaczionnyij/ [R=301,NC,L]
+RewriteRule ^karton/$ https://santechsnab.com/katalog/karton/ [R=301,NC,L]
+RewriteRule ^kaprolon-sterzhni/$ https://santechsnab.com/katalog/kaprolon/kaprolon-sterzhni/ [R=301,NC,L]
+RewriteRule ^kaprolon-molibdenonapolnennyij/$ https://santechsnab.com/katalog/kaprolon/kaprolon-molibdenonapolnennyij/ [R=301,NC,L]
+RewriteRule ^kaprolon-maslonapolnennyij/$ https://santechsnab.com/katalog/kaprolon/kaprolon-maslonapolnennyij/ [R=301,NC,L]
+RewriteRule ^kaprolon-listovoj/$ https://santechsnab.com/katalog/kaprolon/kaprolon-listovoj/ [R=301,NC,L]
+RewriteRule ^kaprolon-grafitonapolnennyij/$ https://santechsnab.com/katalog/kaprolon/kaprolon-grafitonapolnennyij/ [R=301,NC,L]
+RewriteRule ^kaprolon/$ https://santechsnab.com/katalog/kaprolon/ [R=301,NC,L]
+RewriteRule ^sverla-s-konicheskim-xvostovikom/$ https://santechsnab.com/katalog/instrumentyi/sverla-s-konicheskim-xvostovikom/ [R=301,NC,L]
+RewriteRule ^sverla-s-czilindricheskim-xvostovikom/$ https://santechsnab.com/katalog/instrumentyi/sverla-s-czilindricheskim-xvostovikom/ [R=301,NC,L]
+RewriteRule ^sverla-czentrovochnyie/$ https://santechsnab.com/katalog/instrumentyi/sverla-czentrovochnyie/ [R=301,NC,L]
+RewriteRule ^semniki-podshipnikov/$ https://santechsnab.com/katalog/instrumentyi/semniki-podshipnikov/ [R=301,NC,L]
+RewriteRule ^rezczyi/$ https://santechsnab.com/katalog/instrumentyi/rezczyi/ [R=301,NC,L]
+RewriteRule ^molotok-kirochka/$ https://santechsnab.com/katalog/instrumentyi/molotki-i-kuvaldyi/molotok-kirochka/ [R=301,NC,L]
+RewriteRule ^molotki-i-kuvaldyi/$ https://santechsnab.com/katalog/instrumentyi/molotki-i-kuvaldyi/ [R=301,NC,L]
+RewriteRule ^krugi-shlifovalnyie/$ https://santechsnab.com/katalog/instrumentyi/krugi-shlifovalnyie/ [R=301,NC,L]
+RewriteRule ^klyuchi/$ https://santechsnab.com/katalog/instrumentyi/klyuchi/ [R=301,NC,L]
+RewriteRule ^klyuchi-rozhkovyie/$ https://santechsnab.com/katalog/instrumentyi/klyuchi-rozhkovyie/ [R=301,NC,L]
+RewriteRule ^klyuchi-gazovyie/$ https://santechsnab.com/katalog/instrumentyi/klyuchi-gazovyie/ [R=301,NC,L]
+RewriteRule ^instrumentyi/$ https://santechsnab.com/katalog/instrumentyi/ [R=301,NC,L]
+RewriteRule ^trimmeryi-(dlya-pokosa-travyi)/$ https://santechsnab.com/katalog/instrumentyi-sturm!/trimmeryi-(dlya-pokosa-travyi)/ [R=301,NC,L]
+RewriteRule ^mashinyi-shlifovalnyie-polirovalnyie-sturm/$ https://santechsnab.com/katalog/instrumentyi-sturm!/mashinyi-shlifovalnyie-polirovalnyie-sturm/ [R=301,NC,L]
+RewriteRule ^elektro$ https://santechsnab.com/katalog/instrumentyi-sturm!/elektroinstrumentyi-sturm!/ [R=301,NC,L]
+RewriteRule ^benzo$ https://santechsnab.com/katalog/instrumentyi-sturm!/benzoinstrumentyi-sturm!/ [R=301,NC,L]
+RewriteRule ^instrumentyi-sturm!/$ https://santechsnab.com/katalog/instrumentyi-sturm!/ [R=301,NC,L]
+RewriteRule ^ftoroplast-sterzhni/$ https://santechsnab.com/katalog/ftoroplast/ftoroplast-sterzhni/ [R=301,NC,L]
+RewriteRule ^ftoroplast-plastinyi/$ https://santechsnab.com/katalog/ftoroplast/ftoroplast-plastinyi/ [R=301,NC,L]
+RewriteRule ^ftoroplast/$ https://santechsnab.com/katalog/ftoroplast/ [R=301,NC,L]
+RewriteRule ^zaglushki-latunnyie/$ https://santechsnab.com/katalog/fitingi-latunnyie/zaglushki-latunnyie/ [R=301,NC,L]
+RewriteRule ^ugolniki-latunnyie/$ https://santechsnab.com/katalog/fitingi-latunnyie/ugolniki-latunnyie/ [R=301,NC,L]
+RewriteRule ^trojniki-latunnyie-muftovyie/$ https://santechsnab.com/katalog/fitingi-latunnyie/trojniki-latunnyie-muftovyie/ [R=301,NC,L]
+RewriteRule ^soediniteli-latunnyie-s-nakidnoj-gajkoj/$ https://santechsnab.com/katalog/fitingi-latunnyie/soediniteli-latunnyie-s-nakidnoj-gajkoj/ [R=301,NC,L]
+RewriteRule ^perexodniki-latunnyie-granenyie-s-rebordoj/$ https://santechsnab.com/katalog/fitingi-latunnyie/perexodniki-latunnyie-granenyie-s-rebordoj/ [R=301,NC,L]
+RewriteRule ^perexodniki-dlya-shlanga-latunnyie-elochka/$ https://santechsnab.com/katalog/fitingi-latunnyie/perexodniki-dlya-shlanga-latunnyie-elochka/ [R=301,NC,L]
+RewriteRule ^nippeli-latunnyie/$ https://santechsnab.com/katalog/fitingi-latunnyie/nippeli-latunnyie/ [R=301,NC,L]
+RewriteRule ^muftyi-latunnyie/$ https://santechsnab.com/katalog/fitingi-latunnyie/muftyi-latunnyie/ [R=301,NC,L]
+RewriteRule ^kontragajki-latunnyie/$ https://santechsnab.com/katalog/fitingi-latunnyie/kontragajki-latunnyie/ [R=301,NC,L]
+RewriteRule ^futorki-latunnyie/$ https://santechsnab.com/katalog/fitingi-latunnyie/futorki-latunnyie/ [R=301,NC,L]
+RewriteRule ^fitingi-latunnyie/$ https://santechsnab.com/katalog/fitingi-latunnyie/ [R=301,NC,L]
+RewriteRule ^stanki,-speczoborudovanie/$ https://santechsnab.com/katalog/elektroinstrumentyi-stavr/stanki,-speczoborudovanie/ [R=301,NC,L]
+RewriteRule ^pilyi-i-rubanki/$ https://santechsnab.com/katalog/elektroinstrumentyi-stavr/pilyi-i-rubanki/ [R=301,NC,L]
+RewriteRule ^mashinyi-shlifovalnyie,-polirovalnyie/$ https://santechsnab.com/katalog/elektroinstrumentyi-stavr/mashinyi-shlifovalnyie,-polirovalnyie/ [R=301,NC,L]
+RewriteRule ^dreli,-perforatoryi,-shurupovertyi/$ https://santechsnab.com/katalog/elektroinstrumentyi-stavr/dreli,-perforatoryi,-shurupovertyi/ [R=301,NC,L]
+RewriteRule ^elektroinstrumentyi-stavr/$ https://santechsnab.com/katalog/elektroinstrumentyi-stavr/ [R=301,NC,L]
+RewriteRule ^shnuryi-bazaltovyie/$ https://santechsnab.com/katalog/bazalt/shnuryi-bazaltovyie/ [R=301,NC,L]
+RewriteRule ^matyi-bazaltovyie/$ https://santechsnab.com/katalog/bazalt/matyi-bazaltovyie/ [R=301,NC,L]
+RewriteRule ^karton-bazaltovyij/$ https://santechsnab.com/katalog/bazalt/karton-bazaltovyij/ [R=301,NC,L]
+RewriteRule ^bazalt/$ https://santechsnab.com/katalog/bazalt/ [R=301,NC,L]
+RewriteRule ^zatvoryi-povorotnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/zatvoryi-povorotnyie/ [R=301,NC,L]
+RewriteRule ^zadvizhki-stalnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/zadvizhki/zadvizhki-stalnyie/ [R=301,NC,L]
+RewriteRule ^zadvizhki-chugunnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/zadvizhki/zadvizhki-chugunnyie/ [R=301,NC,L]
+RewriteRule ^zadvizhki/$ https://santechsnab.com/katalog/armatura-zapornaya/zadvizhki/ [R=301,NC,L]
+RewriteRule ^ventili-stalnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/ventili/ventili-stalnyie/ [R=301,NC,L]
+RewriteRule ^ventili-chugunnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/ventili/ventili-chugunnyie/ [R=301,NC,L]
+RewriteRule ^ventili-bronzovyie/$ https://santechsnab.com/katalog/armatura-zapornaya/ventili/ventili-bronzovyie/ [R=301,NC,L]
+RewriteRule ^kranyi-sharovyie-latunnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/kranyi-sharovyie/kranyi-sharovyie-latunnyie/ [R=301,NC,L]
+RewriteRule ^kranyi-sharovyie/$ https://santechsnab.com/katalog/armatura-zapornaya/kranyi-sharovyie/ [R=301,NC,L]
+RewriteRule ^kranyi-konusnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/kranyi-konusnyie/ [R=301,NC,L]
+RewriteRule ^klapanyi-predoxranitelnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/klapanyi-predoxranitelnyie/ [R=301,NC,L]
+RewriteRule ^klapanyi-obratnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/klapanyi-obratnyie/ [R=301,NC,L]
+RewriteRule ^klapanyi-gazovyie/$ https://santechsnab.com/katalog/armatura-zapornaya/klapanyi-gazovyie/ [R=301,NC,L]
+RewriteRule ^klapanyi-elektromagnitnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/klapanyi-elektromagnitnyie/ [R=301,NC,L]
+RewriteRule ^klapanyi-balansirovochnyie/$ https://santechsnab.com/katalog/armatura-zapornaya/klapanyi-balansirovochnyie/ [R=301,NC,L]
+RewriteRule ^armatura-zapornaya/$ https://santechsnab.com/katalog/armatura-zapornaya/ [R=301,NC,L]
+# ******************* НОВЫЕ редиректы КОНЕЦ
+
+
+#RewriteRule ^kranyi-sharovyie-latunnyie-ci.html$ http://santechsnab.com/kranyi-sharovyie-latunnyie.html [R=301,L]
+#RewriteRule ^zadvizhki-chugunnyie-ci.html$ http://santechsnab.com/zadvizhki-chugunnyie.html [R=301,L]
+#RewriteRule ^ventili-stalnyie-ci.html$ http://santechsnab.com/ventili-stalnyie.html [R=301,L]
+#RewriteRule ^fitingi-polipropilenovyie.html$ http://santechsnab.com/trubyi-i-fitingi-polipropilenovyie [R=301,L]
+#RewriteRule ^gibkaya-podvodka$ https://santechsnab.com/gibkaya-podvodka.html [R=301,L]
+#RewriteRule ^asbotexnicheskie-izdeliya.html$ https://santechsnab.com/list-asbestovyij.html [R=301,L]
+
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ http://santechsnab.com [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ http://santechsnab.com [R=301,L]
+
+# Rewrite www.domain.com -> domain.com -- used with SEO Strict URLs plugin
+RewriteCond %{HTTP_HOST} .
+RewriteCond %{HTTP_HOST} !^santechsnab\.com [NC]
+RewriteRule (.*) http://santechsnab.com/$1 [R=301,L]
+
+
+
+
+
+
+RewriteRule ^/katalog.html$ http://santechsnab.com/katalog.html [R=301,L]
+RewriteRule (.+)\.html?$ https://santechsnab.com/$1/ [R=301,L]
+
+
+
+#с без / на /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !^/sitemap\.xml$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+
+# or for the opposite domain.com -> www.domain.com use the following
+# DO NOT USE BOTH
+#
+#RewriteCond %{HTTP_HOST} .
+#RewriteCond %{HTTP_HOST} !^www\.example-domain-please-change\.com [NC]
+#RewriteRule (.*) http://www.example-domain-please-change.com/$1 [R=301,L]
+
+
+
+# Rewrite secure requests properly to prevent SSL cert warnings, e.g. prevent 
+# https://www.domain.com when your cert only allows https://secure.domain.com
+#RewriteCond %{SERVER_PORT} !^443
+#RewriteRule (.*) https://example-domain-please-change.com/$1 [R=301,L]
+
+
+# The Friendly URLs part
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+# Make sure .htc files are served with the proper MIME type, which is critical
+# for XP SP2. Un-comment if your host allows htaccess MIME type overrides.
+
+#AddType text/x-component .htc
+
+
+
+# If your server is not already configured as such, the following directive
+# should be uncommented in order to set PHP's register_globals option to OFF.
+# This closes a major security hole that is abused by most XSS (cross-site
+# scripting) attacks. For more information: http://php.net/register_globals
+#
+# To verify that this option has been set to OFF, open the Manager and choose
+# Reports -> System Info and then click the phpinfo() link. Do a Find on Page
+# for "register_globals". The Local Value should be OFF. If the Master Value
+# is OFF then you do not need this directive here.
+#
+# IF REGISTER_GLOBALS DIRECTIVE CAUSES 500 INTERNAL SERVER ERRORS :
+#
+# Your server does not allow PHP directives to be set via .htaccess. In that
+# case you must make this change in your php.ini file instead. If you are
+# using a commercial web host, contact the administrators for assistance in
+# doing this. Not all servers allow local php.ini files, and they should
+# include all PHP configurations (not just this one), or you will effectively
+# reset everything to PHP defaults. Consult www.php.net for more detailed
+# information about setting PHP directives.
+
+#php_flag register_globals Off
+
+
+
+# For servers that support output compression, you should pick up a bit of
+# speed by un-commenting the following lines.
+
+#php_flag zlib.output_compression On
+#php_value zlib.output_compression_level 5
+
+
+
+# The following directives stop screen flicker in IE on CSS rollovers. If
+# needed, un-comment the following rules. When they're in place, you may have
+# to do a force-refresh in order to see changes in your designs.
+
+#ExpiresActive On
+#ExpiresByType image/gif A2592000
+#ExpiresByType image/jpeg A2592000
+#ExpiresByType image/png A2592000
+#BrowserMatch "MSIE" brokenvary=1
+#BrowserMatch "Mozilla/4.[0-9]{2}" brokenvary=1
+#BrowserMatch "Opera" !brokenvary
+#SetEnvIf brokenvary 1 force-no-vary
+
+
+ RewriteCond %{THE_REQUEST} ^[^\s]+\s+[^?]*?\?
+ RewriteCond %{QUERY_STRING} ^$
+ RewriteRule .? %{REQUEST_URI}? [R=301,L] 
+

@@ -1,0 +1,67 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '130353bf57d634ee276e4a50492fcead' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":24,"name":"phpthumb","description":"PHPThumb Output Filter v.0.6","editor_type":0,"category":10,"cache_type":0,"snippet":"\\/\\/ PHPThumb Output Filter\\n  \\/\\/\\n  \\/\\/ By Jared Loman a.k.a jtech - http:\\/\\/www.jaredloman.com\\n  \\/\\/\\n  \\/\\/ GitHub: http:\\/\\/github.com\\/jaredloman\\/PHPthumb-Output-Filter\\n  \\/\\/\\n  \\/\\/ Revision by Djordje Dimitrijev (dj13 on Modx forum)\\n  \\/\\/\\n  \\/\\/ Revision Notes:\\n  \\/\\/\\n  \\/\\/ Choose the output from a script:\\n  \\/\\/ 1. Full image tag.\\n  \\/\\/ 2. Only src value (additional attributes will not be used).\\n  \\/\\/ Added possibility use or not high security password from phpThumb config.\\n  \\/\\/ Possibility to add as much as you want default image attributes through the array.     \\n  \\/\\/ New way to add attributes in filter:\\n  \\/\\/ attribute_html_name || attribute_value\\n  \\/\\/\\n  \\/\\/ Version 0.6 beta\\n  \\/\\/\\n  \\/\\/ Current Version Notes:\\n  \\/\\/ Fixed the removal of source only option (oops!)\\n  \\/\\/ Added support to make image urls generated W3C compliant \\n  \\/\\/\\n  \\/\\/ Previous Version Notes:\\n  \\/\\/ v.0.5: Now utilizes the default phpthumb included with Revo!\\n  \\/\\/ v.0.5: I\'m not sure if the high security options continue to be functional.\\n  \\/\\/ v.0.4: Added Source only option (by DJ13)\\n  \\/\\/ v.0.3: Added possibility use or not high security password from phpThumb config.\\n  \\/\\/ v.0.3: Possibility to add as much as you want default image attributes through the array.     \\n  \\/\\/ v.0.3: New way to add attributes in filter:\\n  \\/\\/ v.0.3: attribute_html_name || attribute_value\\n  \\/\\/\\n  \\/\\/ v.0.2: Added array to handle \\"class\\" & \\"alt\\" options with defaults.\\n  \\/\\/ v.0.2: Added a space removal fool-proof in case someone trys to skip the class and add an alt.\\n  \\/\\/ v.0.2: Added Readme\\n  \\/\\/ v.0.2: Still haven\'t tested all phpthumb modifiers.\\n  \\/\\/\\n  \\/\\/ v.0.1: I haven\'t tested all of the phpthumb modifiers, but I think they should work\\n  \\n  \\/\\/ ReadMe:\\n  \\/\\/\\n  \\/\\/ Notes:\\n  \\/\\/ I created the PHPThumb output filter so that I could have some flexibility with my images that an output modifier\\n  \\/\\/ couldn\'t offer me. This output filter is essentially useless for anything other than images (Obviously!), but  I\\n  \\/\\/ figured I\'d at least mention this.\\n  \\/\\/\\n  \\/\\/ This does not support PHPThumbs ability to create new images from nothing. It would be kind of silly to use a\\n  \\/\\/ TV and Output filter for this purpose anyhow.\\n  \\/\\/\\n  \\/\\/ INSTRUCTIONS:\\n  \\/\\/ Step 1.) Create a TV with an input type of \\"IMAGE\\" and an output type of \\"TEXT\\".\\n  \\/\\/ Step 2.) Add an image to the TV.\\n  \\/\\/ Step 3.) Add your TV to your page content or template and modify in the format of the example.\\n  \\/\\/\\n  \\/\\/ OPTIONS:\\n  \\/\\/ Option 1.) The first option is the phpthumb modifications. You can add any modifier that phpthumb supports. (AFIK)\\n  \\/\\/\\n  \\/\\/ IMPORTANT:\\n  \\/\\/ TV Output Type MUST be \\"TEXT\\"!!\\n  \\/\\/\\n  \\/\\/ Examples:\\n  \\/\\/\\n  \\/\\/ Filter full image tag: [[*mytvImage:phpthumb=`&w=100&h=50&zc=1,class||myClass,title||myTitle,style||border: 1px solid #333`]]\\n  \\/\\/ Filter only src output: [[*mytvImage:phpthumb=`&w=100&h=50&zc=1,onlysrc||1`]]\\n  \\/\\/\\n  \\/\\/ Snippet full image tag: [[phpthumb? &input=`files\\/myImage.jpg` &options=`&w=100&h=50&zc=1,class||myClass,title||myTitle`]]\\n  \\/\\/ Snippet only src output v1 (best way if You want only src): [[phpthumb? &input=`files\\/myImage.jpg` &options=`&w=100&h=50&zc=1` &onlysrc=`1`]]\\n  \\/\\/ Snippet only src output v2: [[phpthumb? &input=`files\\/myImage.jpg` &options=`&w=100&h=50&zc=1,onlysrc||1`]]\\n  \\/\\/\\n \\n  $phpthumb_path = \'assets\\/components\\/phpthumb\';\\n  \\n  \\/\\/ Define attribute name - value separator\\n  $attribute_sep = \'||\';\\n\\n  $base = $modx->config[\'base_url\'];\\n\\n  \\/\\/ Default array of attributes with key name like html attribute name. Lowercase for keys.\\n  \\/\\/ Examples:\\n  \\/\\/ $attributes[\'style\'] = \'border:1px solid #ccc;\'\\n  \\/\\/ $attributes[\'title\'] = \'My Title\';\\n  \\/\\/ $attributes[\'class\'] = \'myClass\';\\n  \\/\\/\\n  \\/\\/ IMPORTANT! If You set:\\n  \\/\\/ $output_onlysrc = 1;\\n  \\/\\/ all returns from snippet will be only src\\n\\n  $output_onlysrc = false;\\n\\n  $error = \\"You need to specify at least one option, otherwise this filter is pointless!\\";\\n  if(!empty($options)){$phpthmbOptions = explode(\\",\\", $options);}else{$output = $error; return $output;}\\n\\n  \\/\\/ Include phpThumb config file.\\n  require_once($modx->getOption(\'base_path\') . $phpthumb_path . \'\\/phpThumb.config.php\');\\n\\n  if(isset($PHPTHUMB_CONFIG[\'high_security_password\'])) $_SESSION[\'high_security_password\'] = $PHPTHUMB_CONFIG[\'high_security_password\'];\\n  if(isset($PHPTHUMB_CONFIG[\'high_security_enabled\'])) $_SESSION[\'high_security_enabled\'] = $PHPTHUMB_CONFIG[\'high_security_enabled\'];\\n\\n  $att_out = \'\';\\n  $src = \'\';\\n\\n  \\/\\/ From snippet call\\n  if($onlysrc == 1) {\\n    $output_onlysrc = 1;\\n  }\\n\\n  \\/\\/ If onlysrc is set in snippet call or as default skip secound explode and adding rest of attributes\\n  if($output_onlysrc !=1 ) {\\n\\n    foreach($phpthmbOptions as $k => $v){\\n\\n      \\/\\/ Skip phpThumb modifications\\n      if($k==0) continue;\\n\\n      \\/\\/ Explode rest of options\\n      $m = explode($attribute_sep, $v);  \\n\\n      $m_att = strtolower(trim($m[0]));\\n\\n      \\/\\/ Search for onlysrc in options\\n      if($m_att==\'onlysrc\' && trim($m[1])==1) {\\n        $output_onlysrc = 1;\\n        break;\\n      }\\n\\n      \\/\\/ Join attributes except src\\n      $att_out .= \' \'.$m_att.\'=\\"\'.trim($m[1]).\'\\"\';\\n\\n      \\/\\/ Remove default attribute if exist in phpThumb options\\n      if(isset($attributes[$m_att])) unset($attributes[$m_att]);\\n    }\\n\\n    \\/\\/ Add rest of unused default attributes\\n    if(isset($attributes)) {\\n        foreach($attributes as $k => $v){\\n            $att_out .= \' \'.$k.\'=\\"\'.$v.\'\\"\';\\n        }\\n    }\\n  }\\n\\n  \\/\\/ Image url + phpthumb modifications\\n  $src = \'src=\' . $base . $input . htmlspecialchars($phpthmbOptions[0]);\\n\\n  \\/\\/ If high security is enabled define hash\\n  if($_SESSION[\'high_security_enabled\']){\\n    $output = $base . $phpthumb_path . \'\\/phpThumb.php?\' . $src . \'&hash=\' . md5($src.$_SESSION[\'high_security_password\']);\\n  } else {\\n    $output = $base . $phpthumb_path . \'\\/phpThumb.php?\' . $src ;\\n  }\\n\\n  \\/\\/ Final join and output only src or full image tag\\n  if($output_onlysrc ==1) {\\n    return $output;\\n  } else {\\n    $output = \'<img src=\\"\' . $output .\'\\"\'. $att_out.\'>\';\\n    return $output;\\n  }","locked":0,"properties":"a:0:{}","moduleguid":""}',
+        'guid' => 'ad2632b05767e6fb694ebe9ee7253129',
+        'native_key' => 24,
+        'signature' => '991c9a01f7c05ea1ff97440c3abd8625',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'phpthumboutputfilter',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"phpthumboutputfilter-0.6.1-rc2\\/modCategory\\/0a8df572a29932e02a0c6a9048e10b15\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"phpthumb"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '1ff37c6e50f85cb92d78c73de9bfed83',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '0a8df572a29932e02a0c6a9048e10b15',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"PHPThumbOutputFilter"}',
+);

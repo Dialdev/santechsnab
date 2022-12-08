@@ -1,0 +1,149 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      '0ac0d11d4c6bcbf12b9ffd1bfd39e950' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnDocFormSave","priority":0,"propertyset":0}',
+        'guid' => 'c292137cb8f45a083749cdc4134adb4a',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnDocFormSave',
+        ),
+        'signature' => 'e0e772ce96e814eec0128a2430a5fb1d',
+      ),
+      '6418e06ab955d32e662af5109cfa65e9' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnDocPublished","priority":0,"propertyset":0}',
+        'guid' => 'ea1b5bc6f176b2db6a516376eda30db8',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnDocPublished',
+        ),
+        'signature' => 'e98d8b0d4bc1473323ced813254415da',
+      ),
+      'e86570cbc026e0df68ec0ecf966cc393' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnDocUnPublished","priority":0,"propertyset":0}',
+        'guid' => '2172b42e66c68d0fa3bf0be3af06957d',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnDocUnPublished',
+        ),
+        'signature' => 'c26850cdef5d0adf68e18e329590652f',
+      ),
+      '5ebffe5d588fb23d5d7a4a21685b1a04' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnResourceDuplicate","priority":0,"propertyset":0}',
+        'guid' => '2d001f2413d5a061006b544e6207967e',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnResourceDuplicate',
+        ),
+        'signature' => 'dff7c07c8568d8c6b2af445ad9f8f57e',
+      ),
+      'ccb98ae0f6b747547ea229925d034f18' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnResourceDelete","priority":0,"propertyset":0}',
+        'guid' => '321dfebad56f4583a5184c762a2a6e67',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnResourceDelete',
+        ),
+        'signature' => '15946b98a04d407b43bc3db64d6b197a',
+      ),
+      '8de5ee3271cf3590f59c9ab43942ad0a' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnResourceUndelete","priority":0,"propertyset":0}',
+        'guid' => '85016e408d56efd4fa7ca18c77cb550e',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnResourceUndelete',
+        ),
+        'signature' => '4d372c8d471284f33351d97ed74f65b7',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'sisea',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'aaccc9c51e5877c74459a1673e2a1b8b',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => 'ef959526d764519a1dfc05a56f8e58b4',
+  'native_key' => 1,
+  'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"SimpleSearchIndexer","description":"Automatically indexes Resources into Solr.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * SimpleSearch\\n *\\n * Copyright 2010-11 by Shaun McCormick <shaun+sisea@modx.com>\\n *\\n * This file is part of SimpleSearch, a simple search component for MODx\\n * Revolution. It is loosely based off of AjaxSearch for MODx Evolution by\\n * coroico\\/kylej, minus the ajax.\\n *\\n * SimpleSearch is free software; you can redistribute it and\\/or modify it under\\n * the terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * SimpleSearch is distributed in the hope that it will be useful, but WITHOUT\\n * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\\n * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more\\n * details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * SimpleSearch; if not, write to the Free Software Foundation, Inc., 59 Temple Place,\\n * Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package simplesearch\\n *\\/\\n\\/**\\n * Plugin to index Resources whenever they are changed, published, unpublished,\\n * deleted, or undeleted.\\n *\\n * @var modX $modx\\n * @var SimpleSearch $search\\n *\\n * @package simplesearch\\n *\\/\\n\\nrequire_once $modx->getOption(\'sisea.core_path\',null,$modx->getOption(\'core_path\').\'components\\/simplesearch\\/\').\'model\\/simplesearch\\/simplesearch.class.php\';\\n$search = new SimpleSearch($modx,$scriptProperties);\\n\\n$search->loadDriver($scriptProperties);\\nif (!$search->driver || (!($search->driver instanceof SimpleSearchDriverSolr) && !($search->driver instanceof SimpleSearchDriverElastic))) return;\\n\\n\\/**\\n * helper method for missing params in events\\n * @param modX $modx\\n * @param array $children\\n * @param id $parent\\n * @return boolean\\n *\\/\\nfunction SimpleSearchGetChildren(&$modx,&$children,$parent) {\\n    $success = false;\\n    $kids = $modx->getCollection(\'modResource\',array(\\n        \'parent\' => $parent,\\n    ));\\n    if (!empty($kids)) {\\n        \\/** @var modResource $kid *\\/\\n        foreach ($kids as $kid) {\\n            $children[] = $kid->toArray();\\n            SimpleSearchGetChildren($modx,$children,$kid->get(\'id\'));\\n        }\\n    }\\n    return $success;\\n}\\n\\n$action = \'index\';\\n$resourcesToIndex = array();\\nswitch ($modx->event->name) {\\n    case \'OnDocFormSave\':\\n        $action = \'index\';\\n        $resourceArray = $scriptProperties[\'resource\']->toArray();\\n        foreach ($_POST as $k => $v) {\\n            if (substr($k,0,2) == \'tv\') {\\n                $id = str_replace(\'tv\',\'\',$k);\\n                \\/** @var modTemplateVar $tv *\\/\\n                $tv = $modx->getObject(\'modTemplateVar\',$id);\\n                if ($tv) {\\n                    $resourceArray[$tv->get(\'name\')] = $tv->renderOutput($resource->get(\'id\'));\\n                    $modx->log(modX::LOG_LEVEL_DEBUG,\'Indexing \'.$tv->get(\'name\').\': \'.$resourceArray[$tv->get(\'name\')]);\\n                }\\n                unset($resourceArray[$k]);\\n            }\\n        }\\n        unset($resourceArray[\'ta\'],$resourceArray[\'action\'],$resourceArray[\'tiny_toggle\'],$resourceArray[\'HTTP_MODAUTH\'],$resourceArray[\'modx-ab-stay\'],$resourceArray[\'resource_groups\']);\\n        $resourcesToIndex[] = $resourceArray;\\n        break;\\n    case \'OnDocPublished\':\\n        $action = \'index\';\\n        $resourceArray = $scriptProperties[\'resource\']->toArray();\\n        unset($resourceArray[\'ta\'],$resourceArray[\'action\'],$resourceArray[\'tiny_toggle\'],$resourceArray[\'HTTP_MODAUTH\'],$resourceArray[\'modx-ab-stay\'],$resourceArray[\'resource_groups\']);\\n        $resourcesToIndex[] = $resourceArray;\\n        break;\\n    case \'OnDocUnpublished\':\\n    case \'OnDocUnPublished\':\\n        $action = \'removeIndex\';\\n        $resourceArray = $scriptProperties[\'resource\']->toArray();\\n        unset($resourceArray[\'ta\'],$resourceArray[\'action\'],$resourceArray[\'tiny_toggle\'],$resourceArray[\'HTTP_MODAUTH\'],$resourceArray[\'modx-ab-stay\'],$resourceArray[\'resource_groups\']);\\n        $resourcesToIndex[] = $resourceArray;\\n        break;\\n    case \'OnResourceDuplicate\':\\n        $action = \'index\';\\n        \\/** @var modResource $newResource *\\/\\n        $resourcesToIndex[] = $newResource->toArray();\\n        $children = array();\\n        SimpleSearchGetChildren($modx,$children,$newResource->get(\'id\'));\\n        foreach ($children as $child) {\\n            $resourcesToIndex[] = $child;\\n        }\\n        break;\\n    case \'OnResourceDelete\':\\n        $action = \'removeIndex\';\\n        $resourcesToIndex[] = $resource->toArray();\\n        $children = array();\\n        SimpleSearchGetChildren($modx,$children,$resource->get(\'id\'));\\n        foreach ($children as $child) {\\n            $resourcesToIndex[] = $child;\\n        }\\n        break;\\n    case \'OnResourceUndelete\':\\n        $action = \'index\';\\n        $resourcesToIndex[] = $resource->toArray();\\n        $children = array();\\n        SimpleSearchGetChildren($modx,$children,$resource->get(\'id\'));\\n        foreach ($children as $child) {\\n            $resourcesToIndex[] = $child;\\n        }\\n        break;\\n}\\n\\nforeach ($resourcesToIndex as $resourceArray) {\\n    if (!empty($resourceArray[\'id\'])) {\\n        if ($action == \'index\') {\\n            $search->driver->index($resourceArray);\\n        } else if ($action == \'removeIndex\') {\\n            $search->driver->removeIndex($resourceArray[\'id\']);\\n        }\\n    }\\n}\\nreturn;","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * SimpleSearch\\n *\\n * Copyright 2010-11 by Shaun McCormick <shaun+sisea@modx.com>\\n *\\n * This file is part of SimpleSearch, a simple search component for MODx\\n * Revolution. It is loosely based off of AjaxSearch for MODx Evolution by\\n * coroico\\/kylej, minus the ajax.\\n *\\n * SimpleSearch is free software; you can redistribute it and\\/or modify it under\\n * the terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * SimpleSearch is distributed in the hope that it will be useful, but WITHOUT\\n * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\\n * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more\\n * details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * SimpleSearch; if not, write to the Free Software Foundation, Inc., 59 Temple Place,\\n * Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package simplesearch\\n *\\/\\n\\/**\\n * Plugin to index Resources whenever they are changed, published, unpublished,\\n * deleted, or undeleted.\\n *\\n * @var modX $modx\\n * @var SimpleSearch $search\\n *\\n * @package simplesearch\\n *\\/\\n\\nrequire_once $modx->getOption(\'sisea.core_path\',null,$modx->getOption(\'core_path\').\'components\\/simplesearch\\/\').\'model\\/simplesearch\\/simplesearch.class.php\';\\n$search = new SimpleSearch($modx,$scriptProperties);\\n\\n$search->loadDriver($scriptProperties);\\nif (!$search->driver || (!($search->driver instanceof SimpleSearchDriverSolr) && !($search->driver instanceof SimpleSearchDriverElastic))) return;\\n\\n\\/**\\n * helper method for missing params in events\\n * @param modX $modx\\n * @param array $children\\n * @param id $parent\\n * @return boolean\\n *\\/\\nfunction SimpleSearchGetChildren(&$modx,&$children,$parent) {\\n    $success = false;\\n    $kids = $modx->getCollection(\'modResource\',array(\\n        \'parent\' => $parent,\\n    ));\\n    if (!empty($kids)) {\\n        \\/** @var modResource $kid *\\/\\n        foreach ($kids as $kid) {\\n            $children[] = $kid->toArray();\\n            SimpleSearchGetChildren($modx,$children,$kid->get(\'id\'));\\n        }\\n    }\\n    return $success;\\n}\\n\\n$action = \'index\';\\n$resourcesToIndex = array();\\nswitch ($modx->event->name) {\\n    case \'OnDocFormSave\':\\n        $action = \'index\';\\n        $resourceArray = $scriptProperties[\'resource\']->toArray();\\n        foreach ($_POST as $k => $v) {\\n            if (substr($k,0,2) == \'tv\') {\\n                $id = str_replace(\'tv\',\'\',$k);\\n                \\/** @var modTemplateVar $tv *\\/\\n                $tv = $modx->getObject(\'modTemplateVar\',$id);\\n                if ($tv) {\\n                    $resourceArray[$tv->get(\'name\')] = $tv->renderOutput($resource->get(\'id\'));\\n                    $modx->log(modX::LOG_LEVEL_DEBUG,\'Indexing \'.$tv->get(\'name\').\': \'.$resourceArray[$tv->get(\'name\')]);\\n                }\\n                unset($resourceArray[$k]);\\n            }\\n        }\\n        unset($resourceArray[\'ta\'],$resourceArray[\'action\'],$resourceArray[\'tiny_toggle\'],$resourceArray[\'HTTP_MODAUTH\'],$resourceArray[\'modx-ab-stay\'],$resourceArray[\'resource_groups\']);\\n        $resourcesToIndex[] = $resourceArray;\\n        break;\\n    case \'OnDocPublished\':\\n        $action = \'index\';\\n        $resourceArray = $scriptProperties[\'resource\']->toArray();\\n        unset($resourceArray[\'ta\'],$resourceArray[\'action\'],$resourceArray[\'tiny_toggle\'],$resourceArray[\'HTTP_MODAUTH\'],$resourceArray[\'modx-ab-stay\'],$resourceArray[\'resource_groups\']);\\n        $resourcesToIndex[] = $resourceArray;\\n        break;\\n    case \'OnDocUnpublished\':\\n    case \'OnDocUnPublished\':\\n        $action = \'removeIndex\';\\n        $resourceArray = $scriptProperties[\'resource\']->toArray();\\n        unset($resourceArray[\'ta\'],$resourceArray[\'action\'],$resourceArray[\'tiny_toggle\'],$resourceArray[\'HTTP_MODAUTH\'],$resourceArray[\'modx-ab-stay\'],$resourceArray[\'resource_groups\']);\\n        $resourcesToIndex[] = $resourceArray;\\n        break;\\n    case \'OnResourceDuplicate\':\\n        $action = \'index\';\\n        \\/** @var modResource $newResource *\\/\\n        $resourcesToIndex[] = $newResource->toArray();\\n        $children = array();\\n        SimpleSearchGetChildren($modx,$children,$newResource->get(\'id\'));\\n        foreach ($children as $child) {\\n            $resourcesToIndex[] = $child;\\n        }\\n        break;\\n    case \'OnResourceDelete\':\\n        $action = \'removeIndex\';\\n        $resourcesToIndex[] = $resource->toArray();\\n        $children = array();\\n        SimpleSearchGetChildren($modx,$children,$resource->get(\'id\'));\\n        foreach ($children as $child) {\\n            $resourcesToIndex[] = $child;\\n        }\\n        break;\\n    case \'OnResourceUndelete\':\\n        $action = \'index\';\\n        $resourcesToIndex[] = $resource->toArray();\\n        $children = array();\\n        SimpleSearchGetChildren($modx,$children,$resource->get(\'id\'));\\n        foreach ($children as $child) {\\n            $resourcesToIndex[] = $child;\\n        }\\n        break;\\n}\\n\\nforeach ($resourcesToIndex as $resourceArray) {\\n    if (!empty($resourceArray[\'id\'])) {\\n        if ($action == \'index\') {\\n            $search->driver->index($resourceArray);\\n        } else if ($action == \'removeIndex\') {\\n            $search->driver->removeIndex($resourceArray[\'id\']);\\n        }\\n    }\\n}\\nreturn;"}',
+);

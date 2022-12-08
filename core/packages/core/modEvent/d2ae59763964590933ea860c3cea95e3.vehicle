@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd19c4d11dff902259dadb4b9487d7ec9',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => 'd2ae59763964590933ea860c3cea95e3',
+  'native_key' => 'OnLoadWebPageCache',
+  'object' => '{"name":"OnLoadWebPageCache","service":4,"groupname":"System"}',
+);

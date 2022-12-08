@@ -1,0 +1,60 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '5ab84a95c4ee249fc51244ecd64cdc2c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":78,"name":"ifEval","description":"","editor_type":0,"category":20,"cache_type":0,"snippet":"\\/**\\n  * ifEval\\n  *\\n  * Snippet for comparison operations on TV, placeholders and other values.\\n  * Use the correct PHP code for input parameter, as the expression in the \'IF\' function in PHP.\\n  * IMPORTANT: This snippet uses PHP EVAL function. It should be used with careful security precautions.\\n  *\\n  * @ author Djordje Dimitrijev (dj13 on Modx forum)\\n  * @ version 0.9 beta\\n  *\\n  * CURRENT VERSION NOTES:\\n  *\\n  * Added possibility for unlimited number of snippet parameters.\\n  * New way for naming parameters.\\n  * Added support for placholders.\\n  * Added processElementTags suggested by Bert (bertoost on Modx forum).\\n  * And much more :)\\n  *\\n  * VERSION 0.1 pl NOTES:\\n  *\\n  * First initial version.\\n  *\\n  * IMPORTANT:\\n  *\\n  * Support for default naming parameters from ifEval v0.1 (input, contentFalse, contentTrue)\\n  * will be removed in next final version.\\n  *\\n  * USAGE:\\n  *\\n  * First select a name as a base for the parameter names. Say, let it be MyVar\\n  * All possible parameters with MyVar are (7):\\n  *\\n  * ccMyVar - Statement expresion (require).\\n  *\\n  * rrMyVarTrue - (Opt) Will be returned if the statement is correct.\\n  * rrMyVarFalse - (Opt) Will be returned if the statement is not correct.\\n  *\\n  * evalMyVarTrue - (Opt) Evaluate and return if the statement is correct.\\n  * evalMyVarFalse - (Opt) Evaluate and return if the statement is not correct.\\n  *\\n  * chunkMyVarTrue (Opt) and\\n  * chunkMyVarFalse (Opt) must be in JSON format  in the following form:  \\n  * {\\"chunk_name\\" : {\\"placeholder_name\\": \\"content_for_placeholder_name\\" ,\\n  *                  \\"other_placholder\\": \\"content_for_other_placholder\\"},\\n  * {\\"other_chunk_name\\" : {\\"placeholder_123\\": \\"content_for_placeholder_123\\"}}    \\n  * Special: evalute content for placholder. Put the ($evalReturnPrefix default \\"eval\\") on the placholder:\\n  * {\\"third_chunk_name\\" : {\\"evalThisPlaceholder\\": \\"[[mySnippet]] * 1.18\\"}\\n  *\\n  * $jsonQuote - Because of restrictions JSON format, and needs for quotation marks, you can use $jsonQuote default \\"%%\\"\\n  * {\\"fourth_chunk_name\\" : {\\"evalPlaceholder123\\": \\"[[+price]] + %%[[delivery]]%%\\"}\\n  *\\n  * Output from the snippet will be in the order of parameters in the snippet call.\\n  *\\n  * EXAMPLES:\\n  *\\n  * In template with contentTrue and contentFalse parameter:\\n  * [[!ifEval? &ccName123=`stripos(\\"[[*pagetitle]]\\", \\"a\\")===0` &rrName123True=`<h3>Article with first letter A<\\/h3>` &rrName123False=`<h3>Article with first letter different from A<\\/h3>`]]\\n  *\\n  * In template with with several different parameters and evaluate return:\\n  * [[!ifEval?\\n  *   &ccABC=`[[*id]]==5 && \\"[[*group]]\\"==\\"phone\\"`\\n  *   &rrABCTrue=`<img src=\\"phone_icon.jpg\\" \\/>`\\n  *   &evalABCTrue=`\\"<h4>Phone price: \\".([[*price]]+[[!delivery? &product=`phone`]]).\\"<\\/h4>\\"`\\n  *   \\n  *   &ccQWE=`[[*id]]==5 && \\"[[*group]]\\"==\\"notebook\\"`  \\n  *   &rrQWETrue =`<img src=\\"notebook_icon.jpg\\" \\/>`\\n  *   &evalQWETrue=`\\"<h4>Notebook price: \\".([[*price]]+[[!delivery? &product=`notebook`]]).\\"<\\/h4>\\"`\\n  *\\n  *   &ccXYZ=`[[*id]]!=5 and [[*id]]!=23`\\n  *   &rrXYZTrue=`[[$comment]]`  \\n  *   &rrXYZFalse=`[[$links]]`\\n  * ]]\\n  *\\n  * With chunk parameter in JSON format:\\n  * [[!ifEval?\\n  *   &ccCondition=`\\"[[+user]]\\"==\\"registered\\"`\\n  *   &chunkConditionTrue=\\n  *       `{\\n  *          \\"myChunk\\" :\\n  *          {\\n  *             \\"name\\": \\"[[+name]]\\" ,\\n  *             \\"phone\\": \\"[[+phone]]\\",\\n  *             \\"email\\": \\"[[+email]]\\"\\n  *          }\\n  *        }`\\n  *   &chunkConditionFalse=\\n  *       `{\\n  *          \\"myChunk2\\" :\\n  *          {\\n  *             \\"name\\": \\"[[+name]]\\",\\n  *             \\"evaldate\\": \\"date(%%d-m-y%%,time())\\"\\n  *          }\\n  *        }`\\n  *   &rrConditionTrue=`<a href=\\"login.php\\">Login<\\/a>`\\n  * ]]\\n  *\\n  *\\n  *\\/\\n  \\n  \\n  \\/\\/ DEFAULT OPTIONS\\n  empty($conditionPrefix)? $conditionPrefix = \'cc\' : \'\' ;\\n  empty($returnPrefix)? $returnPrefix = \'rr\' : \'\' ;\\n  empty($trueSufix)? $trueSufix = \'True\' : \'\' ;\\n  empty($falseSufix)? $falseSufix = \'False\' : \'\' ;\\n  empty($chunkPrefix)? $chunkPrefix = \'chunk\' : \'\' ;\\n  empty($jsonQuote)? $jsonQuote = \'%%\' : \'\' ;\\n  empty($evalReturnPrefix)? $evalReturnPrefix = \'eval\' : \'\' ;\\n  !isset($displayEvalError)? $displayEvalError = 1 : \'\' ;   \\n  !isset($returnSeparator)? $returnSeparator = \'\' : \'\' ;\\n  !isset($chunkSeparator)? $chunkSeparator = \'\' : \'\' ;\\n  \\n  $output = array();  \\n  $return = false;\\n  $scriptPropertiesOrder = array_keys($scriptProperties);\\n\\n  \\/\\/ OLD CODE will be removed in next final version\\n  if(isset($input)){\\n    if(!isset($contentFalse)) $contentFalse = false;\\n    if(!isset($contentTrue)) $contentTrue = false;\\n    $ifeval_str = \'\';\\n    $modx->parser->processElementTags(\'\', $input, true, true);\\n    $ifeval_str = \'if(\'.$input.\') return true; else return false;\';\\n    $return = eval($ifeval_str);\\n    $modx->parser->processElementTags(\'\', $contentTrue, true, true);\\n    $modx->parser->processElementTags(\'\', $contentFalse, true, true);\\n    if($return) $output_old[] = $contentTrue; else $output_old[] = $contentFalse;\\n  }\\n  \\n  $return = false;\\n  if (!function_exists(\'buildName\')) {\\n    function buildName($name, $search =\'\', $prefix = \'\', $sufix = \'\') {    \\n      $length =  strlen($search);\\n      $basename = ($search !=\'\') ?  substr($name, $length) : $name ;\\n      $out[1] = $prefix . $basename . $sufix ;\\n      $out[2] = $basename ;\\n      return $out;    \\n    }\\n  }\\n  if (!function_exists(\'evalOut\')) {\\n    function evalOut($code, $type = \'if\', $error = 1){\\n      $out = false;\\n      if($type == \'if\'){\\n        if($error == 1){\\n          $out = eval(\'if(\'.$code.\') return true; else return false;\');\\n        } else {\\n          $out = @eval(\'if(\'.$code.\') return true; else return false;\');\\n        }\\n      }\\n      if($type == \'var\'){\\n        if($error == 1){\\n          $out = eval(\'return \'.$code.\';\');\\n        } else {\\n          $out = @eval(\'return \'.$code.\';\');\\n        }\\n      }\\n      return $out;  \\n    }\\n  }    \\n  foreach($scriptProperties as $k => $v){\\n    if(stripos($k, $conditionPrefix) === 0){  \\n      $aa = buildName($k, $conditionPrefix, $conditionPrefix );\\n      $name = $aa[1];\\n      $basename = $aa[2];\\n      $ab =& $$name;\\n      $modx->parser->processElementTags(\'\', $ab, true, true);\\n      !empty($ab) ? $return = evalOut($ab, \'if\', $displayEvalError)  : \'\' ;\\n      \\n      $return_true_name = $returnPrefix . $basename . $trueSufix;\\n      $return_false_name = $returnPrefix . $basename . $falseSufix;\\n      \\n      $eval_true_name = $evalReturnPrefix . $basename . $trueSufix;\\n      $eval_false_name = $evalReturnPrefix . $basename . $falseSufix;\\n      \\n      $chunk_true_name = $chunkPrefix . $basename . $trueSufix;\\n      $chunk_false_name = $chunkPrefix . $basename . $falseSufix;\\n      \\n      $rt =& $$return_true_name;\\n      $rf =& $$return_false_name;\\n      \\n      $et =& $$eval_true_name;\\n      $ef =& $$eval_false_name;\\n      \\n      $ct =& $$chunk_true_name;\\n      $cf =& $$chunk_false_name;\\n      \\n      if($return && isset($rt)){\\n        $modx->parser->processElementTags(\'\', $rt, true, true);\\n        $output[$return_true_name] = $rt;\\n      }\\n      if(!$return && isset($rf)){\\n        $modx->parser->processElementTags(\'\', $rf, true, true);     \\n        $output[$return_false_name] = $rf;\\n      }\\n      if($return && isset($et)){\\n        $modx->parser->processElementTags(\'\', $et, true, true);\\n        $output[$eval_true_name] = evalOut($et, \'var\', $displayEvalError);\\n      }  \\n      if(!$return && isset($ef)){\\n        $modx->parser->processElementTags(\'\', $ef, true, true);\\n        $output[$eval_false_name] = evalOut($ef, \'var\', $displayEvalError);\\n      }\\n      $ctf_name = false;  \\n      if($return && !empty($ct)) {$ctf = $ct; $ctf_name = $chunk_true_name;}\\n      if(!$return && !empty($cf)) {$ctf = $cf; $ctf_name = $chunk_false_name;}\\n      if($ctf_name !== false){\\n         $ctf = $modx->fromJSON($ctf);\\n         foreach($ctf as $m => $n){\\n          foreach($n as $kk => $vv){\\n            $vv = str_replace($jsonQuote  , \'\\"\'  , $vv  );\\n            if(stripos($kk, $evalReturnPrefix) === 0){  \\n              $modx->parser->processElementTags(\'\', $vv, true, true);\\n              $vv = evalOut($vv, $type = \'var\', $displayEvalError);\\n              $kk = str_replace($evalReturnPrefix  , \'\'  , $kk  );\\n            }       \\n           $o[$kk] = $vv ;       \\n          }\\n          $oo[] = $modx->getChunk($m,$o);\\n        }\\n         $output[$ctf_name] = implode($chunkSeparator, $oo);\\n         unset ($oo);\\n       }                     \\n    }\\n  }\\n  foreach($scriptPropertiesOrder as $k => $v){\\n    isset($output[$v])? $final[$k] = $output[$v] : \'\' ;\\n  }\\n  isset($output_old) && isset($final)  ? $final = array_merge($output_old, $final) : $final = $output_old  ;\\n  $final = implode($returnSeparator , $final);\\n  return $final;","locked":0,"properties":"a:0:{}","moduleguid":""}',
+        'guid' => '2afbd70328e903d2084b67a66135e74b',
+        'native_key' => 78,
+        'signature' => '55296b142d80e908b949a2489a501b80',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'ifeval',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c5124334ca919ab6aeb6f16984c310c8',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '717c6fe6dde5613b464b8d6f01e15fe9',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"ifEval"}',
+);

@@ -1,0 +1,155 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '77c2d6cc28a958a14b97561f80e1de16' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"phpthumbsup","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\r\\n * Turns a set of arguments passed to this snippet into a phpThumbsUp url for a thumbnail\\r\\n *\\r\\n *\\r\\n * @package   phpThumbsUp\\r\\n * @author    Darkstar Design (info@darkstardesign.com)\\r\\n *\\/\\r\\n\\r\\n\\/\\/ input\\r\\n$image = !empty($input) ? trim($input) : \'\';\\r\\n$options = !empty($options) ? trim($options) : \'\';\\r\\n\\r\\n\\/\\/ path to model\\r\\n$default_path = $modx->getOption(\'core_path\') . \'components\\/phpthumbsup\\/\';\\r\\n$path = $modx->getOption(\'phpthumbsup.core_path\', NULL, $default_path) . \'model\\/phpthumbsup\\/\';\\r\\n$thumbsup = $modx->getService(\'thumbsup\', \'PhpThumbsUp\', $path, $scriptProperties);\\r\\n\\r\\n\\/\\/ make sure we have an image and options\\r\\nif (!empty($image)) {\\r\\n    $image = $thumbsup->options_to_path($image, $options);\\r\\n}\\r\\n\\r\\n\\/\\/ return image path\\r\\nreturn $image;","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\r\\n * Turns a set of arguments passed to this snippet into a phpThumbsUp url for a thumbnail\\r\\n *\\r\\n *\\r\\n * @package   phpThumbsUp\\r\\n * @author    Darkstar Design (info@darkstardesign.com)\\r\\n *\\/\\r\\n\\r\\n\\/\\/ input\\r\\n$image = !empty($input) ? trim($input) : \'\';\\r\\n$options = !empty($options) ? trim($options) : \'\';\\r\\n\\r\\n\\/\\/ path to model\\r\\n$default_path = $modx->getOption(\'core_path\') . \'components\\/phpthumbsup\\/\';\\r\\n$path = $modx->getOption(\'phpthumbsup.core_path\', NULL, $default_path) . \'model\\/phpthumbsup\\/\';\\r\\n$thumbsup = $modx->getService(\'thumbsup\', \'PhpThumbsUp\', $path, $scriptProperties);\\r\\n\\r\\n\\/\\/ make sure we have an image and options\\r\\nif (!empty($image)) {\\r\\n    $image = $thumbsup->options_to_path($image, $options);\\r\\n}\\r\\n\\r\\n\\/\\/ return image path\\r\\nreturn $image;"}',
+        'guid' => '55b6b0d8148fc3baa2297e1dcce73305',
+        'native_key' => NULL,
+        'signature' => 'f992f1fc3daaae36ba05435bcb23abaa',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      'a36f214dd6878a3309ba37b195a09c06' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'ca326cb32132e8d34a69cfb2273181c2' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnFileManagerUpload","priority":0,"propertyset":0}',
+              'guid' => '2923fd1803c9178181e6284986cce2bf',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnFileManagerUpload',
+              ),
+              'signature' => '08bebe848b4a2250dd9df91fd7ef68d8',
+            ),
+            'ad49747973f35e7861dfd89bfad6a171' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnPageNotFound","priority":0,"propertyset":0}',
+              'guid' => '9445f6e45c21535d567144610741ab06',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnPageNotFound',
+              ),
+              'signature' => '206b8cadeafd8bb85e329b0b968735bf',
+            ),
+            '1978d9a54b161d085b630eee782effbf' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSiteRefresh","priority":0,"propertyset":0}',
+              'guid' => '1322ab8097205aa1b8afa8f0c262ccec',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSiteRefresh',
+              ),
+              'signature' => '7d66ffda49ad94a7ffb1f6764767767a',
+            ),
+            'e1bdec8ed7d59cc1d32b846232b847fc' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnLoadWebDocument","priority":0,"propertyset":0}',
+              'guid' => '8620a055f1054292c9126df1b2567647',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnLoadWebDocument',
+              ),
+              'signature' => 'e895f622545a88daf0a18c8380a89598',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"phpThumbsUp","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\r\\n * The main handler for phpthumbsup. Instantiates model and performs appropriate actions based on event.\\r\\n *\\r\\n * @package   phpThumbsUp\\r\\n * @author    Darkstar Design (info@darkstardesign.com)\\r\\n *\\/\\r\\n\\r\\n\\/\\/ path to model\\r\\n$default_path = $modx->getOption(\'core_path\') . \'components\\/phpthumbsup\\/\';\\r\\n\\r\\n$path = $modx->getOption(\'phpthumbsup.core_path\', NULL, $default_path) . \'model\\/phpthumbsup\\/\';\\r\\n$thumbsup = $modx->getService(\'thumbsup\', \'PhpThumbsUp\', $path, $scriptProperties);\\r\\n$do_responsive_threshold = $modx->getOption(\'phpthumbsup.responsive\');\\r\\n\\r\\n\\/\\/ make sure model loaded, if not log error and return\\r\\nif (!($thumbsup instanceof PhpThumbsUp)) {\\r\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[phpThumbsUp] Could not load PhpThumbsUp class.\');\\r\\n    return NULL;\\r\\n}\\r\\n\\r\\n\\/\\/ handle events\\r\\nswitch ($modx->event->name) {\\r\\n\\r\\n    \\/\\/ OnFileManagerUpload we want to auto create thumbs if specified in settings\\r\\n    case \'OnFileManagerUpload\':\\r\\n        $thumbsup->process_upload($files, $directory);\\r\\n        break;\\r\\n\\r\\n    \\/\\/ OnPageNotFound and OnHandleRequest means we need to look for a thumb\\r\\n    case \'OnHandleRequest\':\\r\\n    case \'OnPageNotFound\':\\r\\n        $thumbsup->process_thumb();\\r\\n        break;\\r\\n\\r\\n    \\/\\/ OnSiteRefresh delete phpthumbsup cache\\r\\n    case \'OnSiteRefresh\':\\r\\n        $thumbsup->clear_cache();\\r\\n        break;\\r\\n\\r\\n    \\/\\/ OnLoadWebDocument add javascript\\r\\n    case \'OnLoadWebDocument\':\\r\\n        if ($do_responsive_threshold) {\\r\\n            $modx->regClientStartupScript(MODX_ASSETS_URL . \'components\\/phpthumbsup\\/js\\/responsive.js\');\\r\\n        }\\r\\n        break;\\r\\n\\r\\n    \\/\\/ if we didn\'t match an event just return null\\r\\n    default:\\r\\n        return NULL;\\r\\n\\r\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\r\\n * The main handler for phpthumbsup. Instantiates model and performs appropriate actions based on event.\\r\\n *\\r\\n * @package   phpThumbsUp\\r\\n * @author    Darkstar Design (info@darkstardesign.com)\\r\\n *\\/\\r\\n\\r\\n\\/\\/ path to model\\r\\n$default_path = $modx->getOption(\'core_path\') . \'components\\/phpthumbsup\\/\';\\r\\n\\r\\n$path = $modx->getOption(\'phpthumbsup.core_path\', NULL, $default_path) . \'model\\/phpthumbsup\\/\';\\r\\n$thumbsup = $modx->getService(\'thumbsup\', \'PhpThumbsUp\', $path, $scriptProperties);\\r\\n$do_responsive_threshold = $modx->getOption(\'phpthumbsup.responsive\');\\r\\n\\r\\n\\/\\/ make sure model loaded, if not log error and return\\r\\nif (!($thumbsup instanceof PhpThumbsUp)) {\\r\\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[phpThumbsUp] Could not load PhpThumbsUp class.\');\\r\\n    return NULL;\\r\\n}\\r\\n\\r\\n\\/\\/ handle events\\r\\nswitch ($modx->event->name) {\\r\\n\\r\\n    \\/\\/ OnFileManagerUpload we want to auto create thumbs if specified in settings\\r\\n    case \'OnFileManagerUpload\':\\r\\n        $thumbsup->process_upload($files, $directory);\\r\\n        break;\\r\\n\\r\\n    \\/\\/ OnPageNotFound and OnHandleRequest means we need to look for a thumb\\r\\n    case \'OnHandleRequest\':\\r\\n    case \'OnPageNotFound\':\\r\\n        $thumbsup->process_thumb();\\r\\n        break;\\r\\n\\r\\n    \\/\\/ OnSiteRefresh delete phpthumbsup cache\\r\\n    case \'OnSiteRefresh\':\\r\\n        $thumbsup->clear_cache();\\r\\n        break;\\r\\n\\r\\n    \\/\\/ OnLoadWebDocument add javascript\\r\\n    case \'OnLoadWebDocument\':\\r\\n        if ($do_responsive_threshold) {\\r\\n            $modx->regClientStartupScript(MODX_ASSETS_URL . \'components\\/phpthumbsup\\/js\\/responsive.js\');\\r\\n        }\\r\\n        break;\\r\\n\\r\\n    \\/\\/ if we didn\'t match an event just return null\\r\\n    default:\\r\\n        return NULL;\\r\\n\\r\\n}"}',
+        'guid' => '0928797a4a9412a796b7b9aa45b7663b',
+        'native_key' => NULL,
+        'signature' => 'f887c0f7ccdb3f7f18d31b03b8ba8c53',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'phpthumbsup',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"phpthumbsup-1.1.1-pl\\/modCategory\\/50efdee1c38d6c57cb2f7c6be5b197c4\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"phpthumbsup"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"phpthumbsup-1.1.1-pl\\/modCategory\\/50efdee1c38d6c57cb2f7c6be5b197c4\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"phpthumbsup"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '002f296f4da225e2d610a94715006d86',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '50efdee1c38d6c57cb2f7c6be5b197c4',
+  'native_key' => 0,
+  'object' => '{"id":0,"parent":0,"category":"phpThumbsUp"}',
+);

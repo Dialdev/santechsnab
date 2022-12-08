@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'phpthumbsup',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd0cf52971da9e0df7c189bce5c87edbd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '20207648563421e2831f44b2a5f28121',
+  'native_key' => 'phpthumbsup.available_filters',
+  'object' => '{"key":"phpthumbsup.available_filters","value":"brit,cont,gam,sat,ds,gray,th,rcd,clr,sep,usm,blur,sblr,smth,lvl,wb,hist,flip,ric,elip,bvl,bord,fram,drop,crop,rot,size,stc","xtype":"textfield","namespace":"phpthumbsup","area":"general","editedon":null}',
+);
